@@ -1,0 +1,172 @@
+[
+  {
+    "id": "5000558389",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558389-settings-general-settings-social-media-tab",
+    "title": "Settings: General Settings - Social Media Tab",
+    "category": "Settings & Configuration",
+    "folder": "General Settings",
+    "last_modified": "2026-09-15T12:00:00Z",
+    "content": "The Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n\nKey Configuration Options:\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard.\n2. Open Graph Meta Tags: Automatically generates Facebook OG tags and Twitter Cards for social sharing.\n3. Social Share Buttons: Toggle social share widgets on blog posts, member profile pages, and event listings. Members can embed YouTube and Vimeo video showreels directly on their listing profile tabs.\n\nNative vs Custom:\nThis is a 100% built-in native setting located at Settings >> General Settings >> Social Media tab. No custom coding or API development is required to display social links or share icons.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/general-settings-social-media.png",
+        "alt": "Social Media Tab in General Settings showing Facebook, Twitter, and Instagram URL inputs",
+        "vision_description": "Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'."
+      }
+    ],
+    "tags": ["social media", "facebook", "twitter", "settings", "header", "footer", "native setting", "youtube", "video", "showreels"]
+  },
+  {
+    "id": "5000558401",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+    "title": "How to Import Categories via CSV File",
+    "category": "Member Management",
+    "folder": "Member Categories",
+    "last_modified": "2026-08-20T10:30:00Z",
+    "content": "You can bulk upload hundreds or thousands of top-level categories and sub-categories using the CSV Import tool.\n\nSteps to Import:\n1. Navigate to My Members >> Member Categories in the Admin Dashboard.\n2. Click the 'Import Categories' button at the top right.\n3. Download the sample CSV template to ensure your column mapping matches: Top Category Name, Sub-Level 1 Name, Sub-Level 2 Name.\n4. Upload your CSV file and select the delimiter (comma or semicolon).\n5. Review the preview table and click 'Start Import'.\n\nImportant Limitations:\n- Maximum 5,000 categories per single batch upload to prevent server timeouts.\n- Existing category IDs are preserved; duplicates are flagged for merging or skipping.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/import-categories-csv-step1.png",
+        "alt": "Member Categories screen with Import Categories button highlighted in blue",
+        "vision_description": "Admin UI screenshot of My Members > Member Categories. The 'Import Categories' action button in the top action bar is highlighted with a blue tooltip. Below is the category tree hierarchy."
+      }
+    ],
+    "tags": ["import", "categories", "csv", "bulk upload", "member management", "taxonomy"]
+  },
+  {
+    "id": "5000558420",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+    "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+    "category": "Finance & Payments",
+    "folder": "Payment Gateways",
+    "last_modified": "2026-09-30T14:15:00Z",
+    "content": "Brilliant Directories natively integrates with Stripe to process recurring membership fees, one-time lead purchases, digital product sales, and pay-per-post fees.\n\nConfiguration Steps:\n1. Go to Finance >> Payment Gateways.\n2. Select 'Stripe' as your Default Payment Gateway.\n3. Click 'Connect with Stripe' or manually enter your Stripe Publishable Key and Stripe Secret Key (found in your Stripe Dashboard under Developers >> API Keys).\n4. Enable Stripe Webhooks by copying the webhook endpoint URL from BD into your Stripe Dashboard (events required: invoice.payment_succeeded, customer.subscription.deleted).\n5. Set currency (USD, EUR, GBP, CAD, AUD, etc.) and toggle 'Test Mode' for sandbox validation.\n\nRefund & Cancellation Policy Handling:\n- Full and partial refunds can be processed directly inside the Brilliant Directories admin panel under Finance >> Transaction History by clicking 'Refund'.\n- When a member cancels their subscription, Stripe halts future billing automatically and changes the BD member status based on your setting: 'Keep active until end of period' or 'Downgrade immediately to free tier'.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+        "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+        "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+      }
+    ],
+    "tags": ["stripe", "payment gateway", "finance", "billing", "subscriptions", "refunds", "cancellations", "credit card"]
+  },
+  {
+    "id": "5000558435",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+    "title": "Finance: How to Issue Refunds and Void Invoices",
+    "category": "Finance & Payments",
+    "folder": "Invoices & Billing",
+    "last_modified": "2026-10-02T16:45:00Z",
+    "content": "Site administrators can issue full or partial refunds for any paid transaction directly from the admin dashboard without logging into Stripe or PayPal.\n\nHow to Issue a Refund:\n1. Navigate to Finance >> Transaction History.\n2. Locate the transaction using member email, invoice ID, or transaction date.\n3. Click the 'Actions' dropdown on the right side of the transaction row.\n4. Select 'Issue Refund'.\n5. Choose 'Full Refund' or 'Partial Refund' and enter the refund amount.\n6. Enter an optional internal note (e.g., 'Customer satisfied with cancellation policy within 14-day window').\n7. Click 'Confirm Refund'. The funds are credited back to the member's original payment method via the gateway within 5-10 business days.\n\nVoiding Unpaid Invoices:\nFor overdue or pending invoices, select 'Void Invoice' from the Actions menu to prevent further automated collection attempts.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+        "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+        "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+      }
+    ],
+    "tags": ["refunds", "void invoice", "finance", "disputes", "transaction history", "billing policy"]
+  },
+  {
+    "id": "5000558450",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558450-lead-generation-automating-lead-matching-and-distribution",
+    "title": "Lead Generation: Automating Lead Matching and Distribution",
+    "category": "Lead Generation",
+    "folder": "Auto-Matching Rules",
+    "last_modified": "2026-09-18T11:20:00Z",
+    "content": "Brilliant Directories includes an automated Lead Matching Engine that routes visitor inquiries to eligible directory members based on category and geographic radius.\n\nConfiguration Settings (Settings >> Lead Settings):\n1. Auto-Match by Category: Match leads with members who specialize in the requested category or sub-category.\n2. Auto-Match by Location: Match leads within a specific radius (e.g., 25 miles / 50 km) based on ZIP/Postal code geocoding.\n3. Max Members per Lead: Define how many members receive each lead inquiry (e.g., first 3 members to accept).\n4. Lead Acceptance Pricing: Configure whether leads are free for premium membership plans or require a pay-per-lead fee ($15, $25, etc.).\n5. Automated Notifications: Instant SMS and email alerts sent to matched members when a new lead is submitted.\n\nNative vs Custom:\nThis is a standard core feature in Brilliant Directories. A company does not need custom Zapier or custom webhook scripts for standard radius/category matching.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/lead-auto-matching-rules.png",
+        "alt": "Lead matching settings screen showing radius slider and category filters",
+        "vision_description": "Settings > Lead Settings page showing 'Match By Location Radius: 25 Miles', dropdown for 'Member Membership Plans to Notify', and numerical input for 'Maximum Matches Allowed per Lead'."
+      }
+    ],
+    "tags": ["leads", "lead generation", "auto match", "radius search", "notifications", "native setting"]
+  },
+  {
+    "id": "5000558465",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558465-design-customizing-homepage-hero-search-module",
+    "title": "Design: Customizing the Homepage Hero & Search Module",
+    "category": "Design & Appearance",
+    "folder": "Homepage Layout",
+    "last_modified": "2026-09-22T09:40:00Z",
+    "content": "The Homepage Hero section is the main banner visitors see. You can customize the headline, background image or video, and search bar layout natively.\n\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Banner.\n3. Select Search Box Type: 'Keyword + Location', 'Category Dropdown + Location', or 'Single Search Bar'.\n4. Upload your custom hero banner image (recommended resolution: 1920x600px, WebP or JPEG).\n5. Enter Headline and Sub-headline text with optional text shadow and color pickers.\n\nCustom CSS/HTML:\nIf a client requires a unique custom multi-step search widget not supported by default, you can edit the widget code in Toolbox >> Widget Manager >> 'Bootstrap Theme - Homepage Search'.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/homepage-hero-search-settings.png",
+        "alt": "Design settings homepage layout showing hero search type dropdown",
+        "vision_description": "Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'."
+      }
+    ],
+    "tags": ["homepage", "hero", "search bar", "design settings", "widgets", "custom css"]
+  },
+  {
+    "id": "5000558480",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558480-seo-editing-meta-tags-and-canonical-urls",
+    "title": "SEO: Editing Meta Tags, Canonical URLs, and Robots.txt",
+    "category": "SEO & Indexing",
+    "folder": "Meta Tags & URLs",
+    "last_modified": "2026-09-10T15:10:00Z",
+    "content": "Brilliant Directories provides native SEO controls for all core pages, category search results, and member profiles.\n\nSEO Management:\n1. Static Pages: Edit title tags, meta descriptions, and custom OG tags in Content >> Edit Web Pages >> SEO Settings tab.\n2. Dynamic Search Results: Configure SEO templates in Settings >> SEO Templates. Uses smart shortcodes such as %location%, %category%, %site_name% to generate unique titles like 'Top 10 Plumbers in Chicago, IL | MyDirectory'.\n3. Canonical URLs: Automatically injected on all pages to prevent duplicate content penalties from faceted filter parameters.\n4. Robots.txt and Sitemap.xml: Built-in XML sitemap generated dynamically at /sitemap.xml. Robots.txt can be customized under Settings >> General Settings >> SEO tab.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/seo-template-shortcodes.png",
+        "alt": "SEO Templates screen showing variable tags %category% and %location%",
+        "vision_description": "Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock."
+      }
+    ],
+    "tags": ["seo", "meta tags", "canonical url", "sitemap", "robots.txt", "google indexing"]
+  },
+  {
+    "id": "5000558495",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558495-member-dashboard-custom-fields-and-form-manager",
+    "title": "Member Management: Adding Custom Form Fields via Form Manager",
+    "category": "Member Management",
+    "folder": "Forms & Fields",
+    "last_modified": "2026-09-28T13:30:00Z",
+    "content": "To collect extra information from members (e.g. Years of Experience, License Number, Spoken Languages, Social Media handles), use the Form Manager.\n\nInstructions:\n1. Go to Toolbox >> Form Manager.\n2. Find the 'Listing - Contact Details' or 'Listing - Additional Details' form and click 'Customize'.\n3. Click 'Add Field' at the top or insert between existing fields.\n4. Select Field Type: Single-line Text, Dropdown Select, Checkbox Group, Date Picker, File/PDF Upload, or Rich Text Editor.\n5. Specify Database Variable Name (e.g. 'license_number'), Field Label, Placeholder, and toggle 'Required Field' if mandatory.\n6. Save changes. The field immediately appears in member edit profiles and on their public profile page.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/form-manager-add-custom-field.png",
+        "alt": "Form manager interface showing drag-and-drop fields and field types dropdown",
+        "vision_description": "Toolbox > Form Manager showing a list of draggable form elements. An expanded field settings drawer shows 'Field Type: Dropdown Select', 'Database Variable: years_experience', and options list."
+      }
+    ],
+    "tags": ["forms", "form manager", "custom fields", "member profiles", "license number", "toolbox"]
+  },
+  {
+    "id": "5000558510",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558510-developers-api-webhooks-and-zapier-integration",
+    "title": "Developers: REST API, Webhooks, and Zapier Integration",
+    "category": "Developer Tools & API",
+    "folder": "API & Integrations",
+    "last_modified": "2026-10-05T08:20:00Z",
+    "content": "Brilliant Directories offers a REST API and Webhook system for synchronizing data with external CRMs (HubSpot, Salesforce), email marketing tools (Mailchimp, ActiveCampaign), or custom backends.\n\nAPI Details:\n- Authentication: API Key sent via Bearer Token header (Settings >> API Keys).\n- Endpoints: Members CRUD (/api/v2/members), Leads (/api/v2/leads), Transactions (/api/v2/transactions).\n- Rate Limits: 120 requests per minute per API token.\n\nOutbound Webhooks:\nConfigure Webhooks in Developer Tools >> Webhooks to trigger real-time POST payloads to your server on:\n- member.created / member.updated / member.cancelled\n- lead.matched / lead.purchased\n- review.submitted",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/api-keys-and-webhooks-panel.png",
+        "alt": "API Keys management table and Webhook endpoint configuration",
+        "vision_description": "Admin screen showing Developer Tools > API Keys with generated API tokens, copy button, and a Webhook Events tab listing active webhook triggers with green 'Live' status."
+      }
+    ],
+    "tags": ["api", "webhooks", "zapier", "crm", "hubspot", "developers", "integration"]
+  },
+  {
+    "id": "5000558525",
+    "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+    "title": "Membership: Member Cancellation and Data Deletion Procedures",
+    "category": "Member Management",
+    "folder": "Account Status & Retention",
+    "last_modified": "2026-10-08T17:00:00Z",
+    "content": "Members can cancel their membership directly from their user dashboard if self-cancellation is enabled, or by contacting site support.\n\nAdmin Cancellation Control (Settings >> General Settings >> Member Cancellation):\n1. Self-Service Cancellation: Enable/disable toggle for 'Allow Members to Cancel Account from Dashboard'.\n2. Cancellation Survey: Collect reason for leaving (Price, Found alternative, Inactivity, Other) to improve retention.\n3. Handling Member Listings: Choose whether cancelled member listings are immediately hidden, downgraded to Free Claim Listing, or permanently deleted.\n4. GDPR / CCPA Right-to-be-Forgotten: When a member requests full deletion, navigate to My Members, search the member, click 'Actions >> Delete Member' and confirm hard delete. All personal identifiable data, uploaded files, and credit card tokens are permanently wiped.",
+    "images": [
+      {
+        "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+        "alt": "Cancellation settings toggle and exit survey prompt editor",
+        "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+      }
+    ],
+    "tags": ["cancellation", "delete account", "gdpr", "retention", "refund policy", "member status"]
+  }
+]

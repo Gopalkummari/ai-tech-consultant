@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-10-18T02:29:50.216721+00:00",
+  "total_in_sitemap": 1537,
+  "total_local_articles": 10,
+  "added_count": 1535,
+  "updated_count": 2,
+  "removed_count": 8,
+  "added_sample": [
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558357-can-i-send-a-mass-email-campaign-using-brilliant-directories-",
+      "lastmod": "2026-06-18T06:08:26+05:30"
+    },
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558363-emails-email-accounts",
+      "lastmod": "2026-06-18T20:33:08+05:30"
+    },
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558373-email-forwarders",
+      "lastmod": "2026-06-18T01:10:33+05:30"
+    },
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558475-how-to-import-members-via-csv-file",
+      "lastmod": "2026-09-15T23:42:49+05:30"
+    },
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000559709-how-to-override-and-edit-default-css-stylesheets",
+      "lastmod": "2023-07-15T04:59:09+05:30"
+    }
+  ],
+  "updated_sample": [
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558389-settings-general-settings-social-media-tab",
+      "lastmod": "2023-10-03T22:10:48+05:30",
+      "id": "5000558389"
+    },
+    {
+      "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+      "lastmod": "2026-06-09T17:13:28+05:30",
+      "id": "5000558401"
+    }
+  ],
+  "removed_sample": [
+    "5000558420",
+    "5000558435",
+    "5000558450",
+    "5000558465",
+    "5000558480"
+  ]
+}
