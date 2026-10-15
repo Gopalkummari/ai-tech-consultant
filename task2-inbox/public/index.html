@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Inbox Agent — AI Tech Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090e1a;
+      --card-bg: rgba(18, 27, 46, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #3b82f6;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 10% 10%, #0d1933 0%, var(--bg) 90%);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(9, 14, 26, 0.85);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+
+    .badge-task {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .stats-bar { display: flex; gap: 1.25rem; font-size: 0.85rem; }
+    .stat-chip {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.35rem 0.85rem;
+      border-radius: 8px;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .stat-chip span.val { font-weight: 700; color: #38bdf8; }
+
+    nav.sub-nav {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 2rem 0;
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(13, 21, 39, 0.4);
+    }
+    .nav-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { color: #fff; }
+    .nav-btn.active { color: #38bdf8; border-bottom-color: #38bdf8; }
+
+    main {
+      flex: 1;
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      height: calc(100vh - 145px);
+    }
+
+    /* Column 1: Email Inbox List */
+    .inbox-list-col {
+      width: 440px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+
+    .inbox-header {
+      padding: 1rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--card-border);
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .filter-pills { display: flex; gap: 0.4rem; overflow-x: auto; padding-bottom: 4px; }
+    .pill {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .pill.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+
+    .email-items-container { flex: 1; overflow-y: auto; }
+
+    .email-item {
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .email-item:hover { background: rgba(255, 255, 255, 0.03); }
+    .email-item.selected { background: rgba(59, 130, 246, 0.15); border-left: 3px solid #3b82f6; }
+
+    .email-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.35rem;
+    }
+    .sender-name { font-weight: 600; font-size: 0.88rem; color: #f1f5f9; }
+    .cat-tag {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .cat-how_to { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+    .cat-refund_cancellation { background: rgba(244, 63, 94, 0.2); color: #fda4af; }
+    .cat-quote { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; }
+    .cat-complaint { background: rgba(245, 158, 11, 0.2); color: #fcd34d; }
+    .cat-follow_up { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; }
+    .cat-edge_cases { background: rgba(236, 72, 153, 0.2); color: #f472b6; }
+
+    .email-subject { font-size: 0.85rem; color: #cbd5e1; font-weight: 500; margin-bottom: 0.3rem; }
+    .email-snippet { font-size: 0.78rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    /* Column 2: Detail & Drafting Panel */
+    .inbox-detail-col {
+      flex: 1;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+
+    .detail-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .email-original-box {
+      padding: 1.25rem 1.5rem;
+      background: rgba(15, 23, 42, 0.5);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .drafting-workspace {
+      flex: 1;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      overflow-y: auto;
+    }
+
+    .draft-textarea {
+      width: 100%;
+      flex: 1;
+      min-height: 220px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1rem;
+      color: #f8fafc;
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      outline: none;
+      resize: vertical;
+    }
+    .draft-textarea:focus { border-color: var(--accent); }
+
+    .action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-approve { background: #059669; color: white; }
+    .btn-approve:hover { background: #10b981; }
+    .btn-edit { background: #2563eb; color: white; }
+    .btn-simulate { background: rgba(168, 85, 247, 0.2); border: 1px solid rgba(168, 85, 247, 0.4); color: #c084fc; }
+
+    /* Graduation Modal / Drawer */
+    .progress-bar-container {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      height: 8px;
+      overflow: hidden;
+      margin-top: 0.4rem;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      transition: width 0.3s;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      width: 600px;
+      max-width: 90vw;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <div>
+        <h2 style="font-size: 1.15rem; font-weight: 700;">The Inbox Agent</h2>
+        <p style="font-size: 0.78rem; color: var(--text-muted);">Task 2 • Self-Improving Email Assistant • 20-in-a-row Graduation Policy</p>
+      </div>
+      <span class="badge-task">Task 2 Active</span>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-chip">
+        <span>Dataset:</span>
+        <span class="val" id="stat-emails">50 Emails</span>
+      </div>
+      <div class="stat-chip">
+        <span>Autonomous Modes:</span>
+        <span class="val" id="stat-autonomous" style="color:#10b981;">0 Categories</span>
+      </div>
+      <div class="stat-chip">
+        <span>Rules Learned:</span>
+        <span class="val" id="stat-rules" style="color:#c084fc;">3 Active</span>
+      </div>
+      <button class="btn btn-simulate" onclick="simulateGraduationClick()">Simulate 20-Approval Graduation</button>
+    </div>
+  </header>
+
+  <nav class="sub-nav">
+    <button class="nav-btn active" onclick="switchView('inbox')">Customer Email Inbox (50 Scenarios)</button>
+    <button class="nav-btn" onclick="switchView('graduation')">Graduation Engine &amp; Learned Rules</button>
+  </nav>
+
+  <main id="view-inbox">
+    <!-- Column 1: List -->
+    <div class="inbox-list-col">
+      <div class="inbox-header">
+        <input type="text" id="email-search" class="search-input" placeholder="Search 50 customer emails..." oninput="filterEmails()">
+        <div class="filter-pills">
+          <div class="pill active" onclick="setCategoryFilter('all')">All</div>
+          <div class="pill" onclick="setCategoryFilter('how_to')">How-To</div>
+          <div class="pill" onclick="setCategoryFilter('refund_cancellation')">Refunds</div>
+          <div class="pill" onclick="setCategoryFilter('quote')">Quotes</div>
+          <div class="pill" onclick="setCategoryFilter('complaint')">Complaints</div>
+          <div class="pill" onclick="setCategoryFilter('edge_cases')">Edge Cases</div>
+        </div>
+      </div>
+      <div class="email-items-container" id="email-list"></div>
+    </div>
+
+    <!-- Column 2: Detail & Drafting -->
+    <div class="inbox-detail-col">
+      <div class="detail-header" id="detail-header">
+        <div>
+          <h3 id="current-subject" style="font-size: 1.1rem; margin-bottom: 0.25rem;">Select an email from the inbox</h3>
+          <p id="current-sender" style="font-size: 0.82rem; color: var(--text-muted);"></p>
+        </div>
+        <div id="status-badge-container"></div>
+      </div>
+
+      <div class="email-original-box" id="email-original-box">
+        <p style="color: var(--text-muted);">Select any customer inquiry to generate a context-aware draft using the Task 1 Knowledge Brain API.</p>
+      </div>
+
+      <div class="drafting-workspace">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h4 style="font-size: 0.95rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em;">AI Draft in Company Voice</h4>
+          <span id="draft-autonomy-pill" style="font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8;">Human-in-the-Loop Gate</span>
+        </div>
+
+        <textarea id="draft-text" class="draft-textarea" placeholder="Draft will be generated here automatically..."></textarea>
+
+        <div id="sources-container" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
+
+        <div class="action-row">
+          <button class="btn" style="background: rgba(255,255,255,0.08); color:#fff;" onclick="generateDraftForSelected()">Regenerate Draft</button>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-edit" onclick="openEditModal()">Edit &amp; Teach Agent</button>
+            <button class="btn btn-approve" onclick="approveSelected()">1-Click Approve &amp; Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- VIEW 2: Graduation & Self-Improvement -->
+  <main id="view-graduation" style="display:none; flex-direction:column; gap:1.5rem; overflow-y:auto;">
+    <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:1.5rem;">
+      <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Autonomous Graduation Engine (20-in-a-row Policy)</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1.5rem;">
+        Once human operators approve <strong>20 drafts of the same category in a row without making changes</strong>, that category graduates to autonomous sending. Any human edit or complaint immediately trips the safety circuit breaker and resets the streak to 0.
+      </p>
+      <div id="graduation-cards" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;"></div>
+    </div>
+
+    <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:1.5rem;">
+      <h3 style="font-size:1.15rem; margin-bottom:0.5rem;">Learned Rules &amp; Style Memory</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Rules extracted automatically whenever a human consultant edits an AI draft.</p>
+      <div id="rules-list" style="display:flex; flex-direction:column; gap:0.75rem;"></div>
+    </div>
+  </main>
+
+  <!-- Edit & Feedback Modal -->
+  <div class="modal-backdrop" id="edit-modal">
+    <div class="modal-box">
+      <h3 style="font-size: 1.1rem;">Edit Draft &amp; Train Agent</h3>
+      <p style="font-size: 0.82rem; color: var(--text-muted);">Make your adjustments below. The agent will compare your final version against its original draft to learn persistent company guidelines.</p>
+      <textarea id="modal-edit-text" style="width:100%; height:200px; background:rgba(15,23,42,0.9); border:1px solid var(--card-border); border-radius:8px; padding:0.75rem; color:#fff; font-family:var(--font-sans); font-size:0.88rem;"></textarea>
+      <input type="text" id="modal-notes" placeholder="Optional learning note (e.g., 'Emphasize 5-10 business day turnaround')" style="background:rgba(15,23,42,0.8); border:1px solid var(--card-border); border-radius:8px; padding:0.6rem 0.85rem; color:#fff; font-size:0.85rem;">
+      <div style="display:flex; justify-content:flex-end; gap:0.5rem;">
+        <button class="btn" style="background:transparent; border:1px solid var(--card-border); color:#fff;" onclick="closeEditModal()">Cancel</button>
+        <button class="btn btn-edit" onclick="submitEdit()">Save, Learn &amp; Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = window.location.origin;
+    let allEmails = [];
+    let selectedEmailId = null;
+    let activeCategory = 'all';
+
+    async function init() {
+      await loadEmails();
+      await loadStats();
+      if (allEmails.length) selectEmail(allEmails[0].id);
+    }
+
+    async function loadEmails() {
+      const res = await fetch(`${API}/api/emails`);
+      allEmails = await res.json();
+      renderEmailList();
+    }
+
+    async function loadStats() {
+      const gRes = await fetch(`${API}/api/graduation-status`);
+      const gData = await gRes.json();
+      const autoCount = gData.filter(d => d.isAutonomous).length;
+      document.getElementById('stat-autonomous').innerText = `${autoCount} Autonomous`;
+
+      const rRes = await fetch(`${API}/api/learned-rules`);
+      const rData = await rRes.json();
+      document.getElementById('stat-rules').innerText = `${rData.length} Active`;
+    }
+
+    function renderEmailList() {
+      const query = document.getElementById('email-search').value.toLowerCase();
+      const filtered = allEmails.filter(e => {
+        const matchesCat = activeCategory === 'all' || e.category === activeCategory;
+        const matchesQ = e.subject.toLowerCase().includes(query) || e.sender.toLowerCase().includes(query) || e.body.toLowerCase().includes(query);
+        return matchesCat && matchesQ;
+      });
+
+      const container = document.getElementById('email-list');
+      container.innerHTML = filtered.map(e => `
+        <div class="email-item ${e.id === selectedEmailId ? 'selected' : ''}" onclick="selectEmail('${e.id}')">
+          <div class="email-item-top">
+            <span class="sender-name">${escapeHtml(e.sender.split('@')[0])}</span>
+            <span class="cat-tag cat-${e.category}">${e.category.replace('_', ' ')}</span>
+          </div>
+          <div class="email-subject">${escapeHtml(e.subject)}</div>
+          <div class="email-snippet">${escapeHtml(e.body)}</div>
+        </div>
+      `).join('');
+    }
+
+    async function selectEmail(id) {
+      selectedEmailId = id;
+      renderEmailList();
+
+      const res = await fetch(`${API}/api/emails/${id}`);
+      const data = await res.json();
+      const e = data.email;
+      const d = data.draft;
+
+      document.getElementById('current-subject').innerText = e.subject;
+      document.getElementById('current-sender').innerText = `From: ${e.sender} • Received: ${e.received_at.slice(0, 10)}`;
+      document.getElementById('email-original-box').innerHTML = `<strong>Inquiry:</strong><br>${escapeHtml(e.body)}`;
+
+      if (d) {
+        document.getElementById('draft-text').value = d.draftBody;
+        renderSources(d.sources);
+        updateStatusBadge(d);
+      } else {
+        // Auto-generate draft immediately!
+        generateDraftForSelected();
+      }
+    }
+
+    async function generateDraftForSelected() {
+      if (!selectedEmailId) return;
+      document.getElementById('draft-text').value = 'Consulting Knowledge Brain API and drafting reply in company voice...';
+      const res = await fetch(`${API}/api/emails/${selectedEmailId}/draft`, { method: 'POST' });
+      const draft = await res.json();
+      document.getElementById('draft-text').value = draft.draftBody;
+      renderSources(draft.sources);
+      updateStatusBadge(draft);
+      loadStats();
+    }
+
+    function updateStatusBadge(draft) {
+      const badge = document.getElementById('draft-autonomy-pill');
+      if (draft.isAutonomous) {
+        badge.innerHTML = `<span style="color:#10b981; font-weight:700;">🟢 SENT AUTONOMOUSLY (20-Streak Unlocked)</span>`;
+      } else if (draft.status === 'approved_sent') {
+        badge.innerHTML = `<span style="color:#34d399; font-weight:700;">✓ Approved &amp; Sent</span>`;
+      } else if (draft.status === 'edited_sent') {
+        badge.innerHTML = `<span style="color:#60a5fa; font-weight:700;">✏️ Edited &amp; Sent (Learned)</span>`;
+      } else {
+        badge.innerHTML = `<span style="color:#f59e0b; font-weight:700;">⏳ Pending Human Review</span>`;
+      }
+    }
+
+    function renderSources(sources) {
+      const container = document.getElementById('sources-container');
+      if (!sources || !sources.length) {
+        container.innerHTML = '';
+        return;
+      }
+      container.innerHTML = `<strong>Knowledge Brain Sources:</strong> ` + 
+        sources.map(s => `<span class="pill active" style="background:#1e293b; border-color:#3b82f6;">📄 ${escapeHtml(s.title)} (${(s.relevance_score*100).toFixed(0)}%)</span>`).join(' ');
+    }
+
+    async function approveSelected() {
+      if (!selectedEmailId) return;
+      const res = await fetch(`${API}/api/emails/${selectedEmailId}/approve`, { method: 'POST' });
+      const draft = await res.json();
+      updateStatusBadge(draft);
+      alert('Approved and sent! Approval count recorded towards category graduation.');
+      loadStats();
+    }
+
+    function openEditModal() {
+      if (!selectedEmailId) return;
+      document.getElementById('modal-edit-text').value = document.getElementById('draft-text').value;
+      document.getElementById('edit-modal').classList.add('open');
+    }
+    function closeEditModal() {
+      document.getElementById('edit-modal').classList.remove('open');
+    }
+
+    async function submitEdit() {
+      const edited = document.getElementById('modal-edit-text').value;
+      const notes = document.getElementById('modal-notes').value;
+      closeEditModal();
+
+      const res = await fetch(`${API}/api/emails/${selectedEmailId}/edit-send`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ editedText: edited, feedbackNotes: notes })
+      });
+      const data = await res.json();
+      document.getElementById('draft-text').value = edited;
+      updateStatusBadge(data.draft);
+      alert('Draft sent! The agent extracted the style difference and added a new learned rule to persistent memory.');
+      loadStats();
+    }
+
+    async function simulateGraduationClick() {
+      const res = await fetch(`${API}/api/simulate-graduation`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ category: 'how_to' })
+      });
+      const data = await res.json();
+      alert(data.message);
+      loadStats();
+      if (document.getElementById('view-graduation').style.display !== 'none') {
+        renderGraduationView();
+      }
+    }
+
+    function setCategoryFilter(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.filter-pills .pill').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      renderEmailList();
+    }
+
+    function filterEmails() { renderEmailList(); }
+
+    function switchView(view) {
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      if (view === 'inbox') {
+        document.getElementById('view-inbox').style.display = 'flex';
+        document.getElementById('view-graduation').style.display = 'none';
+      } else {
+        document.getElementById('view-inbox').style.display = 'none';
+        document.getElementById('view-graduation').style.display = 'flex';
+        renderGraduationView();
+      }
+    }
+
+    async function renderGraduationView() {
+      const res = await fetch(`${API}/api/graduation-status`);
+      const data = await res.json();
+      const container = document.getElementById('graduation-cards');
+      container.innerHTML = data.map(m => {
+        const pct = Math.min(100, (m.consecutiveUneditedApprovals / m.graduationThreshold) * 100);
+        return `
+          <div style="background:rgba(15,23,42,0.7); border:1px solid var(--card-border); border-radius:12px; padding:1.25rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h4 style="font-size:0.95rem; text-transform:uppercase;">${m.category.replace('_', ' ')}</h4>
+              ${m.isAutonomous ? `<span class="pill" style="background:#059669; color:#fff;">AUTONOMOUS (Graduated)</span>` : `<span class="pill">Under Supervision</span>`}
+            </div>
+            <p style="font-size:0.8rem; color:var(--text-muted);">Consecutive Unedited: <strong>${m.consecutiveUneditedApprovals} / 20</strong></p>
+            <div class="progress-bar-container">
+              <div class="progress-fill" style="width: ${pct}%;"></div>
+            </div>
+            <div style="margin-top:0.75rem; font-size:0.75rem; color:#64748b; display:flex; justify-content:space-between;">
+              <span>Total Drafted: ${m.totalDrafted}</span>
+              <span>Human Edited: ${m.totalEditedByHuman}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const rRes = await fetch(`${API}/api/learned-rules`);
+      const rules = await rRes.json();
+      const rContainer = document.getElementById('rules-list');
+      rContainer.innerHTML = rules.map(r => `
+        <div style="background:rgba(15,23,42,0.6); border-left:3px solid #a855f7; padding:0.85rem 1rem; border-radius:4px;">
+          <h4 style="font-size:0.9rem; color:#c084fc;">${escapeHtml(r.ruleTitle)} <span style="font-size:0.75rem; color:#94a3b8;">(${r.category})</span></h4>
+          <p style="font-size:0.82rem; color:#cbd5e1; margin-top:0.25rem;">${escapeHtml(r.instruction)}</p>
+          <p style="font-size:0.72rem; color:#64748b; margin-top:0.25rem;">Trigger: "${escapeHtml(r.triggerPhrase)}" • Learned: ${r.createdAt.slice(0,10)}</p>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    init();
+  </script>
+</body>
+</html>

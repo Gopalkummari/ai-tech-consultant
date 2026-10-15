@@ -1,0 +1,667 @@
+[
+  {
+    "emailId": "em-001",
+    "category": "how_to",
+    "draftBody": "Hi Sarah jenkins,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Settings & Configuration > General Settings):\n\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n\nKey Configuration Options:\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard....\n\nKey configuration path:\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard.\n2. Open Graph Meta Tags: Automatically generates Facebook OG tags and Twitter Cards for social sharing.\n3. Social Share Buttons: Toggle social share widgets on blog posts, member profile pages, and event listings.\n\nVisual Context (Screenshot): Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Sarah jenkins,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Settings & Configuration > General Settings):\n\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n\nKey Configuration Options:\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard....\n\nKey configuration path:\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard.\n2. Open Graph Meta Tags: Automatically generates Facebook OG tags and Twitter Cards for social sharing.\n3. Social Share Buttons: Toggle social share widgets on blog posts, member profile pages, and event listings.\n\nVisual Context (Screenshot): Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.581,
+    "sources": [
+      {
+        "id": "5000558389",
+        "title": "Settings: General Settings - Social Media Tab",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558389-settings-general-settings-social-media-tab",
+        "category": "Settings & Configuration",
+        "folder": "General Settings",
+        "relevance_score": 0.581,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/general-settings-social-media.png",
+            "alt": "Social Media Tab in General Settings showing Facebook, Twitter, and Instagram URL inputs",
+            "vision_description": "Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'."
+          }
+        ]
+      },
+      {
+        "id": "5000558525",
+        "title": "Membership: Member Cancellation and Data Deletion Procedures",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+        "category": "Member Management",
+        "folder": "Account Status & Retention",
+        "relevance_score": 0.33,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+            "alt": "Cancellation settings toggle and exit survey prompt editor",
+            "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-002",
+    "category": "refund_cancellation",
+    "draftBody": "Hi David miller,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi David miller,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.399,
+    "sources": [
+      {
+        "id": "5000558435",
+        "title": "Finance: How to Issue Refunds and Void Invoices",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+        "category": "Finance & Payments",
+        "folder": "Invoices & Billing",
+        "relevance_score": 0.399,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+            "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+            "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+          }
+        ]
+      },
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.136,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-003",
+    "category": "how_to",
+    "draftBody": "Hi Elena rostova,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Member Categories):\n\nYou can bulk upload hundreds or thousands of top-level categories and sub-categories using the CSV Import tool.\n\nSteps to Import:\n1. Navigate to My Members >> Member Categories in the Admin Dashboard.\n2. Click the 'Import Categories' button at the top right.\n3. Download the sample CSV template to ensure your column mapping matches: Top Category Nam...\n\nKey configuration path:\nSteps to Import:\n1. Navigate to My Members >> Member Categories in the Admin Dashboard.\n2. Click the 'Import Categories' button at the top right.\n3. Download the sample CSV template to ensure your column mapping matches: Top Category Name, Sub-Level 1 Name, Sub-Level 2 Name.\n\nVisual Context (Screenshot): Admin UI screenshot of My Members > Member Categories. The 'Import Categories' action button in the top action bar is highlighted with a blue tooltip. Below is the category tree hierarchy.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Elena rostova,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Member Categories):\n\nYou can bulk upload hundreds or thousands of top-level categories and sub-categories using the CSV Import tool.\n\nSteps to Import:\n1. Navigate to My Members >> Member Categories in the Admin Dashboard.\n2. Click the 'Import Categories' button at the top right.\n3. Download the sample CSV template to ensure your column mapping matches: Top Category Nam...\n\nKey configuration path:\nSteps to Import:\n1. Navigate to My Members >> Member Categories in the Admin Dashboard.\n2. Click the 'Import Categories' button at the top right.\n3. Download the sample CSV template to ensure your column mapping matches: Top Category Name, Sub-Level 1 Name, Sub-Level 2 Name.\n\nVisual Context (Screenshot): Admin UI screenshot of My Members > Member Categories. The 'Import Categories' action button in the top action bar is highlighted with a blue tooltip. Below is the category tree hierarchy.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.55,
+    "sources": [
+      {
+        "id": "5000558401",
+        "title": "How to Import Categories via CSV File",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+        "category": "Member Management",
+        "folder": "Member Categories",
+        "relevance_score": 0.55,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/import-categories-csv-step1.png",
+            "alt": "Member Categories screen with Import Categories button highlighted in blue",
+            "vision_description": "Admin UI screenshot of My Members > Member Categories. The 'Import Categories' action button in the top action bar is highlighted with a blue tooltip. Below is the category tree hierarchy."
+          }
+        ]
+      },
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.192,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-004",
+    "category": "new_project_request",
+    "draftBody": "Hi Mark stevens,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Mark stevens,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.255,
+    "sources": [],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-005",
+    "category": "complaint",
+    "draftBody": "Hi Amanda cross,\n\nI am sincerely sorry for the disruption this has caused your operations. We take system reliability very seriously.\n\nI have flagged this directly with our engineering tier for priority investigation based on our Solution Center protocol. We are verifying the webhook/server logs now and will provide you with a concrete resolution update within 2 hours.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Amanda cross,\n\nI am sincerely sorry for the disruption this has caused your operations. We take system reliability very seriously.\n\nI have flagged this directly with our engineering tier for priority investigation based on our Solution Center protocol. We are verifying the webhook/server logs now and will provide you with a concrete resolution update within 2 hours.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.453,
+    "sources": [
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.453,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      },
+      {
+        "id": "5000558401",
+        "title": "How to Import Categories via CSV File",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558401-how-to-import-categories-via-csv-file",
+        "category": "Member Management",
+        "folder": "Member Categories",
+        "relevance_score": 0.134,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/import-categories-csv-step1.png",
+            "alt": "Member Categories screen with Import Categories button highlighted in blue",
+            "vision_description": "Admin UI screenshot of My Members > Member Categories. The 'Import Categories' action button in the top action bar is highlighted with a blue tooltip. Below is the category tree hierarchy."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-006",
+    "category": "follow_up",
+    "draftBody": "Hi Brian conner,\n\nThank you for checking in with us!\n\nI do not have enough verified documentation in the Brilliant Directories Knowledge Brain to answer this question accurately. I have created an escalation ticket for a technical consultant to review and resolve.\n\nPlease let us know how you would like to proceed and we will take care of the next steps immediately.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Brian conner,\n\nThank you for checking in with us!\n\nI do not have enough verified documentation in the Brilliant Directories Knowledge Brain to answer this question accurately. I have created an escalation ticket for a technical consultant to review and resolve.\n\nPlease let us know how you would like to proceed and we will take care of the next steps immediately.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.289,
+    "sources": [],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-007",
+    "category": "how_to",
+    "draftBody": "Hi Rachel adams,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Forms & Fields):\n\nTo collect extra information from members (e.g. Years of Experience, License Number, Spoken Languages, Social Media handles), use the Form Manager.\n\nInstructions:\n1. Go to Toolbox >> Form Manager.\n2. Find the 'Listing - Contact Details' or 'Listing - Additional Details' form and click 'Customize'.\n3. Click 'Add Field' at the top or insert between e...\n\nKey configuration path:\n1. Go to Toolbox >> Form Manager.\n2. Find the 'Listing - Contact Details' or 'Listing - Additional Details' form and click 'Customize'.\n3. Click 'Add Field' at the top or insert between existing fields.\n4. Select Field Type: Single-line Text, Dropdown Select, Checkbox Group, Date Picker, File/PDF Upload, or Rich Text Editor.\n\nVisual Context (Screenshot): Toolbox > Form Manager showing a list of draggable form elements. An expanded field settings drawer shows 'Field Type: Dropdown Select', 'Database Variable: years_experience', and options list.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Rachel adams,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Forms & Fields):\n\nTo collect extra information from members (e.g. Years of Experience, License Number, Spoken Languages, Social Media handles), use the Form Manager.\n\nInstructions:\n1. Go to Toolbox >> Form Manager.\n2. Find the 'Listing - Contact Details' or 'Listing - Additional Details' form and click 'Customize'.\n3. Click 'Add Field' at the top or insert between e...\n\nKey configuration path:\n1. Go to Toolbox >> Form Manager.\n2. Find the 'Listing - Contact Details' or 'Listing - Additional Details' form and click 'Customize'.\n3. Click 'Add Field' at the top or insert between existing fields.\n4. Select Field Type: Single-line Text, Dropdown Select, Checkbox Group, Date Picker, File/PDF Upload, or Rich Text Editor.\n\nVisual Context (Screenshot): Toolbox > Form Manager showing a list of draggable form elements. An expanded field settings drawer shows 'Field Type: Dropdown Select', 'Database Variable: years_experience', and options list.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.512,
+    "sources": [
+      {
+        "id": "5000558495",
+        "title": "Member Management: Adding Custom Form Fields via Form Manager",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558495-member-dashboard-custom-fields-and-form-manager",
+        "category": "Member Management",
+        "folder": "Forms & Fields",
+        "relevance_score": 0.512,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/form-manager-add-custom-field.png",
+            "alt": "Form manager interface showing drag-and-drop fields and field types dropdown",
+            "vision_description": "Toolbox > Form Manager showing a list of draggable form elements. An expanded field settings drawer shows 'Field Type: Dropdown Select', 'Database Variable: years_experience', and options list."
+          }
+        ]
+      },
+      {
+        "id": "5000558525",
+        "title": "Membership: Member Cancellation and Data Deletion Procedures",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+        "category": "Member Management",
+        "folder": "Account Status & Retention",
+        "relevance_score": 0.296,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+            "alt": "Cancellation settings toggle and exit survey prompt editor",
+            "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-008",
+    "category": "quote",
+    "draftBody": "Hi Carlos mendez,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Carlos mendez,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.143,
+    "sources": [],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-009",
+    "category": "refund_cancellation",
+    "draftBody": "Hi Jessica wu,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Jessica wu,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.364,
+    "sources": [
+      {
+        "id": "5000558525",
+        "title": "Membership: Member Cancellation and Data Deletion Procedures",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+        "category": "Member Management",
+        "folder": "Account Status & Retention",
+        "relevance_score": 0.364,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+            "alt": "Cancellation settings toggle and exit survey prompt editor",
+            "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+          }
+        ]
+      },
+      {
+        "id": "5000558435",
+        "title": "Finance: How to Issue Refunds and Void Invoices",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+        "category": "Finance & Payments",
+        "folder": "Invoices & Billing",
+        "relevance_score": 0.246,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+            "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+            "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-010",
+    "category": "how_to",
+    "draftBody": "Hi Kevin ohearn,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Lead Generation > Auto-Matching Rules):\n\nBrilliant Directories includes an automated Lead Matching Engine that routes visitor inquiries to eligible directory members based on category and geographic radius.\n\nConfiguration Settings (Settings >> Lead Settings):\n1. Auto-Match by Category: Match leads with members who specialize in the requested category or sub-category.\n2. Auto-Match by Loca...\n\nKey configuration path:\nConfiguration Settings (Settings >> Lead Settings):\n1. Auto-Match by Category: Match leads with members who specialize in the requested category or sub-category.\n2. Auto-Match by Location: Match leads within a specific radius (e.g., 25 miles / 50 km) based on ZIP/Postal code geocoding.\n3. Max Members per Lead: Define how many members receive each lead inquiry (e.g., first 3 members to accept).\n\nVisual Context (Screenshot): Settings > Lead Settings page showing 'Match By Location Radius: 25 Miles', dropdown for 'Member Membership Plans to Notify', and numerical input for 'Maximum Matches Allowed per Lead'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Kevin ohearn,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Lead Generation > Auto-Matching Rules):\n\nBrilliant Directories includes an automated Lead Matching Engine that routes visitor inquiries to eligible directory members based on category and geographic radius.\n\nConfiguration Settings (Settings >> Lead Settings):\n1. Auto-Match by Category: Match leads with members who specialize in the requested category or sub-category.\n2. Auto-Match by Loca...\n\nKey configuration path:\nConfiguration Settings (Settings >> Lead Settings):\n1. Auto-Match by Category: Match leads with members who specialize in the requested category or sub-category.\n2. Auto-Match by Location: Match leads within a specific radius (e.g., 25 miles / 50 km) based on ZIP/Postal code geocoding.\n3. Max Members per Lead: Define how many members receive each lead inquiry (e.g., first 3 members to accept).\n\nVisual Context (Screenshot): Settings > Lead Settings page showing 'Match By Location Radius: 25 Miles', dropdown for 'Member Membership Plans to Notify', and numerical input for 'Maximum Matches Allowed per Lead'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.503,
+    "sources": [
+      {
+        "id": "5000558450",
+        "title": "Lead Generation: Automating Lead Matching and Distribution",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558450-lead-generation-automating-lead-matching-and-distribution",
+        "category": "Lead Generation",
+        "folder": "Auto-Matching Rules",
+        "relevance_score": 0.503,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/lead-auto-matching-rules.png",
+            "alt": "Lead matching settings screen showing radius slider and category filters",
+            "vision_description": "Settings > Lead Settings page showing 'Match By Location Radius: 25 Miles', dropdown for 'Member Membership Plans to Notify', and numerical input for 'Maximum Matches Allowed per Lead'."
+          }
+        ]
+      },
+      {
+        "id": "5000558435",
+        "title": "Finance: How to Issue Refunds and Void Invoices",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+        "category": "Finance & Payments",
+        "folder": "Invoices & Billing",
+        "relevance_score": 0.16,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+            "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+            "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-011",
+    "category": "how_to",
+    "draftBody": "Hi Nathan drake,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Settings & Configuration > General Settings):\n\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n\nKey Configuration Options:\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard....\n\nKey configuration path:\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard.\n2. Open Graph Meta Tags: Automatically generates Facebook OG tags and Twitter Cards for social sharing.\n3. Social Share Buttons: Toggle social share widgets on blog posts, member profile pages, and event listings.\n\nVisual Context (Screenshot): Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Nathan drake,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Settings & Configuration > General Settings):\n\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n\nKey Configuration Options:\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard....\n\nKey configuration path:\nThe Social Media tab in General Settings allows site owners to connect their directory to major social platforms including Facebook, X (formerly Twitter), LinkedIn, Instagram, YouTube, and Pinterest.\n1. Social Media Links: Enter full profile URLs. These appear as icons in your site's header, footer, and member dashboard.\n2. Open Graph Meta Tags: Automatically generates Facebook OG tags and Twitter Cards for social sharing.\n3. Social Share Buttons: Toggle social share widgets on blog posts, member profile pages, and event listings.\n\nVisual Context (Screenshot): Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.605,
+    "sources": [
+      {
+        "id": "5000558389",
+        "title": "Settings: General Settings - Social Media Tab",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558389-settings-general-settings-social-media-tab",
+        "category": "Settings & Configuration",
+        "folder": "General Settings",
+        "relevance_score": 0.605,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/general-settings-social-media.png",
+            "alt": "Social Media Tab in General Settings showing Facebook, Twitter, and Instagram URL inputs",
+            "vision_description": "Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'."
+          }
+        ]
+      },
+      {
+        "id": "5000558480",
+        "title": "SEO: Editing Meta Tags, Canonical URLs, and Robots.txt",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558480-seo-editing-meta-tags-and-canonical-urls",
+        "category": "SEO & Indexing",
+        "folder": "Meta Tags & URLs",
+        "relevance_score": 0.322,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/seo-template-shortcodes.png",
+            "alt": "SEO Templates screen showing variable tags %category% and %location%",
+            "vision_description": "Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-012",
+    "category": "refund_cancellation",
+    "draftBody": "Hi Linda k,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Linda k,\n\nThank you for reaching out regarding your account. I have located your transaction history.\n\nPer our policy, our team has initiated the refund process under Finance >> Transaction History. The funds typically reflect back on your original payment card within 5 to 10 business days.\n\nYour recurring subscription has been cancelled so no further automated renewals will take place. If you need any confirmation invoice, please let us know!\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.47,
+    "sources": [
+      {
+        "id": "5000558435",
+        "title": "Finance: How to Issue Refunds and Void Invoices",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+        "category": "Finance & Payments",
+        "folder": "Invoices & Billing",
+        "relevance_score": 0.47,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+            "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+            "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+          }
+        ]
+      },
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.234,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-013",
+    "category": "how_to",
+    "draftBody": "Hi Tom bradley,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Developer Tools & API > API & Integrations):\n\nBrilliant Directories offers a REST API and Webhook system for synchronizing data with external CRMs (HubSpot, Salesforce), email marketing tools (Mailchimp, ActiveCampaign), or custom backends.\n\nAPI Details:\n- Authentication: API Key sent via Bearer Token header (Settings >> API Keys).\n- Endpoints: Members CRUD (/api/v2/members), Leads (/api/v2/le...\n\nKey configuration path:\n- Authentication: API Key sent via Bearer Token header (Settings >> API Keys).\n\nVisual Context (Screenshot): Admin screen showing Developer Tools > API Keys with generated API tokens, copy button, and a Webhook Events tab listing active webhook triggers with green 'Live' status.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Tom bradley,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Developer Tools & API > API & Integrations):\n\nBrilliant Directories offers a REST API and Webhook system for synchronizing data with external CRMs (HubSpot, Salesforce), email marketing tools (Mailchimp, ActiveCampaign), or custom backends.\n\nAPI Details:\n- Authentication: API Key sent via Bearer Token header (Settings >> API Keys).\n- Endpoints: Members CRUD (/api/v2/members), Leads (/api/v2/le...\n\nKey configuration path:\n- Authentication: API Key sent via Bearer Token header (Settings >> API Keys).\n\nVisual Context (Screenshot): Admin screen showing Developer Tools > API Keys with generated API tokens, copy button, and a Webhook Events tab listing active webhook triggers with green 'Live' status.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.398,
+    "sources": [
+      {
+        "id": "5000558510",
+        "title": "Developers: REST API, Webhooks, and Zapier Integration",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558510-developers-api-webhooks-and-zapier-integration",
+        "category": "Developer Tools & API",
+        "folder": "API & Integrations",
+        "relevance_score": 0.398,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/api-keys-and-webhooks-panel.png",
+            "alt": "API Keys management table and Webhook endpoint configuration",
+            "vision_description": "Admin screen showing Developer Tools > API Keys with generated API tokens, copy button, and a Webhook Events tab listing active webhook triggers with green 'Live' status."
+          }
+        ]
+      },
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.147,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-014",
+    "category": "how_to",
+    "draftBody": "Hi Sophia martinez,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Design & Appearance > Homepage Layout):\n\nThe Homepage Hero section is the main banner visitors see. You can customize the headline, background image or video, and search bar layout natively.\n\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Ban...\n\nKey configuration path:\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Banner.\n3. Select Search Box Type: 'Keyword + Location', 'Category Dropdown + Location', or 'Single Search Bar'.\n\nVisual Context (Screenshot): Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Sophia martinez,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Design & Appearance > Homepage Layout):\n\nThe Homepage Hero section is the main banner visitors see. You can customize the headline, background image or video, and search bar layout natively.\n\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Ban...\n\nKey configuration path:\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Banner.\n3. Select Search Box Type: 'Keyword + Location', 'Category Dropdown + Location', or 'Single Search Bar'.\n\nVisual Context (Screenshot): Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.832,
+    "sources": [
+      {
+        "id": "5000558465",
+        "title": "Design: Customizing the Homepage Hero & Search Module",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558465-design-customizing-homepage-hero-search-module",
+        "category": "Design & Appearance",
+        "folder": "Homepage Layout",
+        "relevance_score": 0.832,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/homepage-hero-search-settings.png",
+            "alt": "Design settings homepage layout showing hero search type dropdown",
+            "vision_description": "Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'."
+          }
+        ]
+      },
+      {
+        "id": "5000558389",
+        "title": "Settings: General Settings - Social Media Tab",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558389-settings-general-settings-social-media-tab",
+        "category": "Settings & Configuration",
+        "folder": "General Settings",
+        "relevance_score": 0.224,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/general-settings-social-media.png",
+            "alt": "Social Media Tab in General Settings showing Facebook, Twitter, and Instagram URL inputs",
+            "vision_description": "Screenshot of the Brilliant Directories admin panel under Settings > General Settings > Social Media. Displays text input fields for Facebook Page URL, Twitter Handle, LinkedIn Profile, and toggle switch for 'Enable Social Sharing Icons on Member Pages'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-015",
+    "category": "complaint",
+    "draftBody": "Hi Richard t,\n\nI am sincerely sorry for the disruption this has caused your operations. We take system reliability very seriously.\n\nI have flagged this directly with our engineering tier for priority investigation based on our Solution Center protocol. We are verifying the webhook/server logs now and will provide you with a concrete resolution update within 2 hours.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Richard t,\n\nI am sincerely sorry for the disruption this has caused your operations. We take system reliability very seriously.\n\nI have flagged this directly with our engineering tier for priority investigation based on our Solution Center protocol. We are verifying the webhook/server logs now and will provide you with a concrete resolution update within 2 hours.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.297,
+    "sources": [],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-016",
+    "category": "quote",
+    "draftBody": "Hi Claire bennett,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Claire bennett,\n\nThank you for bringing this project to us. We analyzed your requirements against our Brilliant Directories architecture:\n\n• Classification: COMPLEX CUSTOM DEV\n• Approach: Scope as custom engineering project with API integration.\n• Estimated engineering effort: ~20 hours ($2000)\n\nWe would be delighted to schedule a brief discovery call to finalize the technical specification and Statement of Work (SOW).\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.233,
+    "sources": [],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-017",
+    "category": "how_to",
+    "draftBody": "Hi Greg foster,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (SEO & Indexing > Meta Tags & URLs):\n\nBrilliant Directories provides native SEO controls for all core pages, category search results, and member profiles.\n\nSEO Management:\n1. Static Pages: Edit title tags, meta descriptions, and custom OG tags in Content >> Edit Web Pages >> SEO Settings tab.\n2. Dynamic Search Results: Configure SEO templates in Settings >> SEO Templates. Uses smart sh...\n\nKey configuration path:\n1. Static Pages: Edit title tags, meta descriptions, and custom OG tags in Content >> Edit Web Pages >> SEO Settings tab.\n2. Dynamic Search Results: Configure SEO templates in Settings >> SEO Templates. Uses smart shortcodes such as %location%, %category%, %site_name% to generate unique titles like 'Top 10 Plumbers in Chicago, IL | MyDirectory'.\n3. Canonical URLs: Automatically injected on all pages to prevent duplicate content penalties from faceted filter parameters.\n4. Robots.txt and Sitemap.xml: Built-in XML sitemap generated dynamically at /sitemap.xml. Robots.txt can be customized under Settings >> General Settings >> SEO tab.\n\nVisual Context (Screenshot): Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Greg foster,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (SEO & Indexing > Meta Tags & URLs):\n\nBrilliant Directories provides native SEO controls for all core pages, category search results, and member profiles.\n\nSEO Management:\n1. Static Pages: Edit title tags, meta descriptions, and custom OG tags in Content >> Edit Web Pages >> SEO Settings tab.\n2. Dynamic Search Results: Configure SEO templates in Settings >> SEO Templates. Uses smart sh...\n\nKey configuration path:\n1. Static Pages: Edit title tags, meta descriptions, and custom OG tags in Content >> Edit Web Pages >> SEO Settings tab.\n2. Dynamic Search Results: Configure SEO templates in Settings >> SEO Templates. Uses smart shortcodes such as %location%, %category%, %site_name% to generate unique titles like 'Top 10 Plumbers in Chicago, IL | MyDirectory'.\n3. Canonical URLs: Automatically injected on all pages to prevent duplicate content penalties from faceted filter parameters.\n4. Robots.txt and Sitemap.xml: Built-in XML sitemap generated dynamically at /sitemap.xml. Robots.txt can be customized under Settings >> General Settings >> SEO tab.\n\nVisual Context (Screenshot): Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.539,
+    "sources": [
+      {
+        "id": "5000558480",
+        "title": "SEO: Editing Meta Tags, Canonical URLs, and Robots.txt",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558480-seo-editing-meta-tags-and-canonical-urls",
+        "category": "SEO & Indexing",
+        "folder": "Meta Tags & URLs",
+        "relevance_score": 0.539,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/seo-template-shortcodes.png",
+            "alt": "SEO Templates screen showing variable tags %category% and %location%",
+            "vision_description": "Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock."
+          }
+        ]
+      },
+      {
+        "id": "5000558465",
+        "title": "Design: Customizing the Homepage Hero & Search Module",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558465-design-customizing-homepage-hero-search-module",
+        "category": "Design & Appearance",
+        "folder": "Homepage Layout",
+        "relevance_score": 0.424,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/homepage-hero-search-settings.png",
+            "alt": "Design settings homepage layout showing hero search type dropdown",
+            "vision_description": "Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-018",
+    "category": "how_to",
+    "draftBody": "Hi Patricia lewis,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Account Status & Retention):\n\nMembers can cancel their membership directly from their user dashboard if self-cancellation is enabled, or by contacting site support.\n\nAdmin Cancellation Control (Settings >> General Settings >> Member Cancellation):\n1. Self-Service Cancellation: Enable/disable toggle for 'Allow Members to Cancel Account from Dashboard'.\n2. Cancellation Survey: Co...\n\nKey configuration path:\nAdmin Cancellation Control (Settings >> General Settings >> Member Cancellation):\n1. Self-Service Cancellation: Enable/disable toggle for 'Allow Members to Cancel Account from Dashboard'.\n2. Cancellation Survey: Collect reason for leaving (Price, Found alternative, Inactivity, Other) to improve retention.\n3. Handling Member Listings: Choose whether cancelled member listings are immediately hidden, downgraded to Free Claim Listing, or permanently deleted.\n\nVisual Context (Screenshot): Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Patricia lewis,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Member Management > Account Status & Retention):\n\nMembers can cancel their membership directly from their user dashboard if self-cancellation is enabled, or by contacting site support.\n\nAdmin Cancellation Control (Settings >> General Settings >> Member Cancellation):\n1. Self-Service Cancellation: Enable/disable toggle for 'Allow Members to Cancel Account from Dashboard'.\n2. Cancellation Survey: Co...\n\nKey configuration path:\nAdmin Cancellation Control (Settings >> General Settings >> Member Cancellation):\n1. Self-Service Cancellation: Enable/disable toggle for 'Allow Members to Cancel Account from Dashboard'.\n2. Cancellation Survey: Collect reason for leaving (Price, Found alternative, Inactivity, Other) to improve retention.\n3. Handling Member Listings: Choose whether cancelled member listings are immediately hidden, downgraded to Free Claim Listing, or permanently deleted.\n\nVisual Context (Screenshot): Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.651,
+    "sources": [
+      {
+        "id": "5000558525",
+        "title": "Membership: Member Cancellation and Data Deletion Procedures",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+        "category": "Member Management",
+        "folder": "Account Status & Retention",
+        "relevance_score": 0.651,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+            "alt": "Cancellation settings toggle and exit survey prompt editor",
+            "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+          }
+        ]
+      },
+      {
+        "id": "5000558435",
+        "title": "Finance: How to Issue Refunds and Void Invoices",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558435-finance-how-to-issue-refunds-and-void-invoices",
+        "category": "Finance & Payments",
+        "folder": "Invoices & Billing",
+        "relevance_score": 0.36,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/issue-refund-modal.png",
+            "alt": "Issue Refund modal window with Full/Partial options and confirm button",
+            "vision_description": "Modal dialog overlay on Transaction History. Displays 'Transaction #89211 - Amount: $149.00', radio buttons for 'Full Refund ($149.00)' and 'Partial Refund', refund reason text box, and a red 'Process Refund' button."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-019",
+    "category": "follow_up",
+    "draftBody": "Hi Eric vance,\n\nThank you for checking in with us!\n\nBased on Brilliant Directories Solution Center documentation (Design & Appearance > Homepage Layout):\n\nThe Homepage Hero section is the main banner visitors see. You can customize the headline, background image or video, and search bar layout natively.\n\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Ban...\n\nKey configuration path:\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Banner.\n3. Select Search Box Type: 'Keyword + Location', 'Category Dropdown + Location', or 'Single Search Bar'.\n\nVisual Context (Screenshot): Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'.\n\nPlease let us know how you would like to proceed and we will take care of the next steps immediately.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Eric vance,\n\nThank you for checking in with us!\n\nBased on Brilliant Directories Solution Center documentation (Design & Appearance > Homepage Layout):\n\nThe Homepage Hero section is the main banner visitors see. You can customize the headline, background image or video, and search bar layout natively.\n\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Ban...\n\nKey configuration path:\nCustomization Steps:\n1. Go to Settings >> Design Settings >> Homepage Layout tab.\n2. Select 'Hero Section' widget type: Search with Background Image, Search with Video Background, or Centered CTA Banner.\n3. Select Search Box Type: 'Keyword + Location', 'Category Dropdown + Location', or 'Single Search Bar'.\n\nVisual Context (Screenshot): Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'.\n\nPlease let us know how you would like to proceed and we will take care of the next steps immediately.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.591,
+    "sources": [
+      {
+        "id": "5000558465",
+        "title": "Design: Customizing the Homepage Hero & Search Module",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558465-design-customizing-homepage-hero-search-module",
+        "category": "Design & Appearance",
+        "folder": "Homepage Layout",
+        "relevance_score": 0.591,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/homepage-hero-search-settings.png",
+            "alt": "Design settings homepage layout showing hero search type dropdown",
+            "vision_description": "Admin panel in Design Settings > Homepage Layout. Shows dropdown 'Search Box Call to Action' with options 'Keyword + City/State Search', image upload box for 'Background Image', and hex color picker for 'Overlay Tint'."
+          }
+        ]
+      },
+      {
+        "id": "5000558480",
+        "title": "SEO: Editing Meta Tags, Canonical URLs, and Robots.txt",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558480-seo-editing-meta-tags-and-canonical-urls",
+        "category": "SEO & Indexing",
+        "folder": "Meta Tags & URLs",
+        "relevance_score": 0.23,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/seo-template-shortcodes.png",
+            "alt": "SEO Templates screen showing variable tags %category% and %location%",
+            "vision_description": "Admin screen of Settings > SEO Templates for 'Search Results Page'. Input box for Meta Title showing 'Best [category] in [location] - [site_name]'. Preview snippet renders Google search result mock."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  },
+  {
+    "emailId": "em-020",
+    "category": "how_to",
+    "draftBody": "Hi Susan hayes,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Finance & Payments > Payment Gateways):\n\nBrilliant Directories natively integrates with Stripe to process recurring membership fees, one-time lead purchases, digital product sales, and pay-per-post fees.\n\nConfiguration Steps:\n1. Go to Finance >> Payment Gateways.\n2. Select 'Stripe' as your Default Payment Gateway.\n3. Click 'Connect with Stripe' or manually enter your Stripe Publishable Ke...\n\nKey configuration path:\nConfiguration Steps:\n1. Go to Finance >> Payment Gateways.\n2. Select 'Stripe' as your Default Payment Gateway.\n3. Click 'Connect with Stripe' or manually enter your Stripe Publishable Key and Stripe Secret Key (found in your Stripe Dashboard under Developers >> API Keys).\n\nVisual Context (Screenshot): Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "originalDraft": "Hi Susan hayes,\n\nThanks for contacting support! Here are the exact steps to accomplish this in Brilliant Directories:\n\nBased on Brilliant Directories Solution Center documentation (Finance & Payments > Payment Gateways):\n\nBrilliant Directories natively integrates with Stripe to process recurring membership fees, one-time lead purchases, digital product sales, and pay-per-post fees.\n\nConfiguration Steps:\n1. Go to Finance >> Payment Gateways.\n2. Select 'Stripe' as your Default Payment Gateway.\n3. Click 'Connect with Stripe' or manually enter your Stripe Publishable Ke...\n\nKey configuration path:\nConfiguration Steps:\n1. Go to Finance >> Payment Gateways.\n2. Select 'Stripe' as your Default Payment Gateway.\n3. Click 'Connect with Stripe' or manually enter your Stripe Publishable Key and Stripe Secret Key (found in your Stripe Dashboard under Developers >> API Keys).\n\nVisual Context (Screenshot): Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'.\n\nFeel free to reply directly to this email if you hit any roadblocks along the way.\n\nBest regards,\nAI Tech Support Consultant\nBrilliant Directories Implementation Team",
+    "confidence": 0.451,
+    "sources": [
+      {
+        "id": "5000558420",
+        "title": "Finance: Payment Gateways - Stripe Integration & Setup",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558420-finance-payment-gateways-stripe-integration",
+        "category": "Finance & Payments",
+        "folder": "Payment Gateways",
+        "relevance_score": 0.451,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/stripe-gateway-setup.png",
+            "alt": "Stripe Gateway credentials screen in Brilliant Directories Admin",
+            "vision_description": "Admin panel screen under Finance > Payment Gateways displaying Stripe configuration. Shows input boxes for Publishable Key (pk_live_...) and Secret Key (sk_live_...), Webhook Signing Secret, Currency dropdown set to USD, and a green badge saying 'Stripe Connected Successfully'."
+          }
+        ]
+      },
+      {
+        "id": "5000558525",
+        "title": "Membership: Member Cancellation and Data Deletion Procedures",
+        "url": "https://support.brilliantdirectories.com/support/solutions/articles/5000558525-cancellation-and-account-deletion-workflow",
+        "category": "Member Management",
+        "folder": "Account Status & Retention",
+        "relevance_score": 0.259,
+        "images": [
+          {
+            "url": "https://support.brilliantdirectories.com/images/member-cancellation-settings.png",
+            "alt": "Cancellation settings toggle and exit survey prompt editor",
+            "vision_description": "Settings > General Settings > Member Cancellation. Displays toggle 'Allow Self-Service Cancellation: Yes', and textarea for 'Cancellation Retention Offer Text ($10 off promo code)'."
+          }
+        ]
+      }
+    ],
+    "isAutonomous": false,
+    "status": "pending_review"
+  }
+]

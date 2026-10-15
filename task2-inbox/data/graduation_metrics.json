@@ -1,0 +1,72 @@
+[
+  {
+    "category": "how_to",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 61,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "refund_cancellation",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 18,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "new_project_request",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 6,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "complaint",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 12,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "quote",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 12,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "follow_up",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 12,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  },
+  {
+    "category": "edge_cases",
+    "consecutiveUneditedApprovals": 0,
+    "graduationThreshold": 20,
+    "isAutonomous": false,
+    "totalDrafted": 0,
+    "totalApprovedUnedited": 0,
+    "totalEditedByHuman": 0,
+    "totalRejected": 0
+  }
+]

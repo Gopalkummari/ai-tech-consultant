@@ -1,0 +1,29 @@
+[
+  {
+    "id": "rule-001",
+    "category": "refund_cancellation",
+    "ruleTitle": "Transparent Refund Timelines",
+    "instruction": "Always specify the 5-10 business day turnaround for card refunds and mention invoice number.",
+    "triggerPhrase": "refund",
+    "learnedFromEmailId": "seed",
+    "createdAt": "2026-10-18T02:37:30.422Z"
+  },
+  {
+    "id": "rule-002",
+    "category": "how_to",
+    "ruleTitle": "Exact Setting Navigation Path",
+    "instruction": "Always provide the step-by-step breadcrumb (e.g. Settings >> General Settings) rather than general prose.",
+    "triggerPhrase": "where do i find",
+    "learnedFromEmailId": "seed",
+    "createdAt": "2026-10-18T02:37:30.423Z"
+  },
+  {
+    "id": "rule-003",
+    "category": "quote",
+    "ruleTitle": "Highlight Native vs Custom Savings",
+    "instruction": "Always cross-check Task 1 Brain to see if a feature can be solved with a native setting to save the client money.",
+    "triggerPhrase": "quote",
+    "learnedFromEmailId": "seed",
+    "createdAt": "2026-10-18T02:37:30.423Z"
+  }
+]

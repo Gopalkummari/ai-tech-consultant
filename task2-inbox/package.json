@@ -1,0 +1,21 @@
+{
+  "name": "task2-inbox-agent",
+  "version": "1.0.0",
+  "description": "Task 2 - The Inbox Agent: Replies that get better with every email sent",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "serve": "node dist/index.js",
+    "test": "ts-node test/inbox_eval.ts"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
