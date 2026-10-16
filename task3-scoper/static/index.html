@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting to Scope — Multi-Agent AI Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090e19;
+      --card-bg: rgba(18, 27, 45, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent: #8b5cf6;
+      --accent-blue: #3b82f6;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(circle at 15% 15%, #161233 0%, var(--bg) 90%);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(9, 14, 25, 0.85);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+    .badge-task {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      background: rgba(139, 92, 246, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    /* Agent Team Flow Bar */
+    .agent-pipeline-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem 2rem;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.82rem;
+    }
+    .agent-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      color: var(--text-muted);
+    }
+    .agent-pill.active {
+      color: #c084fc;
+      border-color: #8b5cf6;
+      background: rgba(139, 92, 246, 0.1);
+    }
+    .agent-arrow { color: #475569; }
+
+    main {
+      flex: 1;
+      padding: 1.5rem 2rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 1.5rem;
+    }
+
+    /* Control & Transcript Column */
+    .control-col {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      backdrop-filter: blur(16px);
+      height: fit-content;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    label { font-size: 0.85rem; font-weight: 600; color: #cbd5e1; }
+    select, input {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--card-border);
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      outline: none;
+    }
+    select:focus, input:focus { border-color: var(--accent); }
+
+    .btn {
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: #7c3aed; color: #fff; }
+    .btn-primary:hover { background: #8b5cf6; }
+    .btn-diff { background: #2563eb; color: #fff; }
+    .btn-diff:hover { background: #3b82f6; }
+    .btn-approve { background: #059669; color: #fff; font-size: 0.95rem; }
+    .btn-approve:hover { background: #10b981; }
+
+    .transcript-preview {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      max-height: 280px;
+      overflow-y: auto;
+      font-family: var(--font-mono);
+    }
+
+    /* Output Column */
+    .output-col {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      min-height: 750px;
+    }
+
+    .output-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .output-body {
+      flex: 1;
+      padding: 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Diff Callout Boxes */
+    .diff-banner {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .diff-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.5rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+    .diff-add { background: rgba(16, 185, 129, 0.15); border-left: 3px solid #10b981; }
+    .diff-remove { background: rgba(244, 63, 94, 0.15); border-left: 3px solid #f43f5e; }
+    .diff-mod { background: rgba(245, 158, 11, 0.15); border-left: 3px solid #f59e0b; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th { text-align: left; padding: 0.75rem 1rem; color: var(--text-muted); border-bottom: 1px solid var(--card-border); }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+
+    .tag { font-size: 0.72rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600; }
+    .tag-native { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .tag-custom { background: rgba(244, 63, 94, 0.2); color: #fda4af; }
+    .tag-config { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+
+    .proposal-box {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      font-family: var(--font-sans);
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+      <div>
+        <h2 style="font-size: 1.15rem; font-weight: 700;">Meeting to Scope &amp; Proposal Engine</h2>
+        <p style="font-size: 0.78rem; color: var(--text-muted);">Task 3 Multi-Agent Team • Task 1 Brain Feasibility • Meeting Scope-Diffing</p>
+      </div>
+      <span class="badge-task">Task 3 Active</span>
+    </div>
+
+    <div style="font-size:0.85rem; color:#94a3b8;">
+      Human Approval Gate: <span id="gate-status" style="color:#f59e0b; font-weight:700;">PENDING REVIEW</span>
+    </div>
+  </header>
+
+  <!-- Agent Pipeline Flow -->
+  <div class="agent-pipeline-bar">
+    <div class="agent-pill active" id="pill-a1">🤖 Agent 1: Discovery Analyst</div>
+    <span class="agent-arrow">&rarr;</span>
+    <div class="agent-pill active" id="pill-a2">🧠 Agent 2: Brain Feasibility (Task 1 API)</div>
+    <span class="agent-arrow">&rarr;</span>
+    <div class="agent-pill active" id="pill-a3">📊 Agent 3: Estimator &amp; SOW Author</div>
+    <span class="agent-arrow">&rarr;</span>
+    <div class="agent-pill active" id="pill-a4">⚖️ Agent 4: Scope-Diff &amp; Proposal</div>
+  </div>
+
+  <main>
+    <!-- Left Column: Controls & Transcripts -->
+    <div class="control-col">
+      <h3 style="font-size:1.05rem;">Meeting Transcript Selector</h3>
+
+      <div class="form-group">
+        <label>Primary Meeting Transcript:</label>
+        <select id="sel-transcript" onchange="loadTranscriptPreview(this.value)">
+          <option value="meeting_1_initial_discovery.md">Meeting 1: Apex Legal Discovery (Initial)</option>
+          <option value="meeting_2_followup_scope_changes.md">Meeting 2: Apex Legal Follow-up (Scope Changes)</option>
+          <option value="meeting_3_ecommerce_marketplace.md">Meeting 3: HealthPro Specialists (Discovery)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Client Name:</label>
+        <input type="text" id="inp-client-name" value="Apex Legal Directory">
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">
+        <button class="btn btn-primary" onclick="runSingleScoping()">Run Single Meeting Scoping</button>
+        <button class="btn btn-diff" onclick="runDiffScoping()">Run Meeting 1 vs Meeting 2 Scope Diff &rarr;</button>
+      </div>
+
+      <div class="form-group" style="margin-top:0.5rem;">
+        <label>Transcript Live Inspector:</label>
+        <div class="transcript-preview" id="transcript-preview">Loading transcript...</div>
+      </div>
+    </div>
+
+    <!-- Right Column: SOW, Tasks, Scope-Diff, and Proposal -->
+    <div class="output-col">
+      <div class="output-header">
+        <div>
+          <h3 id="out-title" style="font-size:1.15rem;">Implementation Deliverables</h3>
+          <p id="out-subtitle" style="font-size:0.8rem; color:var(--text-muted);">SOW, task breakdown, native savings, and client proposal</p>
+        </div>
+        <button class="btn btn-approve" id="btn-approve" onclick="approveAndDeliver()" style="display:none;">
+          ✓ Approve &amp; Deliver to Client
+        </button>
+      </div>
+
+      <div class="output-body" id="output-body">
+        <div style="text-align:center; padding:3rem; color:var(--text-muted);">
+          <p>Click <strong>"Run Single Meeting Scoping"</strong> or <strong>"Run Meeting 1 vs Meeting 2 Scope Diff"</strong> to trigger the multi-agent pipeline.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const API = window.location.origin;
+
+    async function loadTranscriptPreview(filename) {
+      const res = await fetch(`${API}/api/transcripts/${filename}`);
+      const data = await res.json();
+      document.getElementById('transcript-preview').innerText = data.content;
+      if (filename.includes('healthpro')) {
+        document.getElementById('inp-client-name').value = 'HealthPro Verified';
+      } else {
+        document.getElementById('inp-client-name').value = 'Apex Legal Directory';
+      }
+    }
+
+    async function runSingleScoping() {
+      const filename = document.getElementById('sel-transcript').value;
+      const client = document.getElementById('inp-client-name').value;
+      const body = document.getElementById('output-body');
+      body.innerHTML = `<div style="text-align:center; padding:2rem; color:#c084fc;">Running Agent Team: Extracting requirements &rarr; Calling Task 1 Brain API &rarr; Generating SOW...</div>`;
+
+      const res = await fetch(`${API}/api/scope/single`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ transcript_filename: filename, client_name: client })
+      });
+      const data = await res.json();
+      renderSingleOutput(data);
+    }
+
+    async function runDiffScoping() {
+      const client = document.getElementById('inp-client-name').value;
+      const body = document.getElementById('output-body');
+      body.innerHTML = `<div style="text-align:center; padding:2rem; color:#38bdf8;">Comparing Meeting 1 vs Follow-up Meeting 2: Detecting Scope Additions, Deletions, and Price Deltas...</div>`;
+
+      const res = await fetch(`${API}/api/scope/diff`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          transcript_1: 'meeting_1_initial_discovery.md',
+          transcript_2: 'meeting_2_followup_scope_changes.md',
+          client_name: client
+        })
+      });
+      const data = await res.json();
+      renderDiffOutput(data);
+    }
+
+    function renderSingleOutput(data) {
+      document.getElementById('btn-approve').style.display = 'block';
+      document.getElementById('gate-status').innerHTML = `<span style="color:#f59e0b;">PENDING CONSULTANT APPROVAL</span>`;
+
+      const sow = data.sow;
+      const tasksRows = sow.task_list.map(t => `
+        <tr>
+          <td><code>${t.task_id}</code></td>
+          <td style="font-weight:600;">${escapeHtml(t.task_name)}</td>
+          <td><span class="tag ${t.is_native ? 'tag-native' : 'tag-custom'}">${t.is_native ? 'NATIVE SETTING ($0)' : t.category}</span></td>
+          <td>${t.estimated_hours} hrs</td>
+          <td>$${t.cost.toFixed(2)}</td>
+          <td style="color:#34d399; font-weight:600;">+$${t.savings_vs_custom_code.toFixed(2)}</td>
+        </tr>
+      `).join('');
+
+      document.getElementById('output-body').innerHTML = `
+        <div style="background:rgba(30,41,59,0.5); padding:1rem; border-radius:10px; border:1px solid var(--card-border);">
+          <h4 style="color:#c084fc; margin-bottom:0.3rem;">Executive Statement of Work</h4>
+          <p style="font-size:0.85rem; color:#cbd5e1;">${escapeHtml(sow.executive_summary)}</p>
+          <div style="display:flex; gap:1.5rem; margin-top:0.75rem; font-size:0.85rem;">
+            <span>Total Effort: <strong>${sow.total_estimated_hours} hours</strong></span>
+            <span>Total Price: <strong>$${sow.total_cost.toFixed(2)}</strong></span>
+            <span style="color:#10b981;">Total Native Savings: <strong>$${sow.total_client_savings.toFixed(2)}</strong></span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:0.5rem;">Prioritized Task Breakdown (Feasibility Verified via Task 1 Brain)</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Task ID</th>
+                <th>Task Name</th>
+                <th>Classification</th>
+                <th>Hours</th>
+                <th>Cost ($100/hr)</th>
+                <th>Savings vs Scratch Code</th>
+              </tr>
+            </thead>
+            <tbody>${tasksRows}</tbody>
+          </table>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:0.5rem;">Client Proposal Preview</h4>
+          <div class="proposal-box">${escapeHtml(data.proposal_markdown)}</div>
+        </div>
+      `;
+    }
+
+    function renderDiffOutput(data) {
+      document.getElementById('btn-approve').style.display = 'block';
+      document.getElementById('gate-status').innerHTML = `<span style="color:#f59e0b;">PENDING CONSULTANT APPROVAL</span>`;
+
+      const diff = data.scope_diff;
+      const fin = diff.financial_impact;
+
+      const adds = diff.added_items.map(a => `
+        <div class="diff-row diff-add">
+          <strong>+ ADDED:</strong> ${escapeHtml(a.title)} (+${a.hours} hrs / $${a.cost})
+        </div>
+      `).join('') || '<div class="diff-row">None</div>';
+
+      const removes = diff.removed_items.map(r => `
+        <div class="diff-row diff-remove">
+          <strong>- REMOVED:</strong> ${escapeHtml(r.title)} (Saved ${r.hours_saved} hrs / $${r.cost_saved.toFixed(2)}) &mdash; ${escapeHtml(r.reason)}
+        </div>
+      `).join('') || '<div class="diff-row">None</div>';
+
+      const mods = diff.modified_items.map(m => `
+        <div class="diff-row diff-mod">
+          <strong>Δ MODIFIED:</strong> ${escapeHtml(m.title)}: ${escapeHtml(m.previous_scope)} &rarr; ${escapeHtml(m.revised_scope)} (+${m.delta_hours} hrs)
+        </div>
+      `).join('') || '<div class="diff-row">None</div>';
+
+      document.getElementById('output-body').innerHTML = `
+        <div class="diff-banner">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h4 style="color:#60a5fa; font-size:1.05rem;">Meeting 1 vs Follow-up Meeting 2: Scope Diff &amp; Change Order</h4>
+            <span class="tag" style="background:#059669; color:#fff;">Net Savings: $${Math.abs(fin.net_cost_difference).toFixed(2)}</span>
+          </div>
+
+          <div><strong>Scope Additions (New Features):</strong>${adds}</div>
+          <div><strong>Scope Deductions (Client Dropped):</strong>${removes}</div>
+          <div><strong>Scope Modifications:</strong>${mods}</div>
+
+          <div style="background:rgba(15,23,42,0.8); padding:0.75rem 1rem; border-radius:8px; font-size:0.85rem; margin-top:0.5rem;">
+            <strong>Net Financial &amp; Timeline Delta:</strong>
+            Net hours change: <strong>${fin.net_hours_difference > 0 ? '+' : ''}${fin.net_hours_difference.toFixed(1)} hrs</strong> 
+            ($${fin.net_cost_difference > 0 ? '+' : ''}${fin.net_cost_difference.toFixed(2)}) • 
+            <span style="color:#10b981; font-weight:600;">${fin.timeline_feasibility}</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:0.5rem;">Revised Client Proposal Document</h4>
+          <div class="proposal-box">${escapeHtml(data.proposal_markdown)}</div>
+        </div>
+      `;
+    }
+
+    async function approveAndDeliver() {
+      const res = await fetch(`${API}/api/proposal/approve`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ proposal_text: 'Approved Proposal', reviewer_name: 'Jordan Miller, Lead AI Consultant' })
+      });
+      const data = await res.json();
+      document.getElementById('gate-status').innerHTML = `<span style="color:#10b981; font-weight:700;">✓ APPROVED &amp; DELIVERED</span>`;
+      alert('Proposal approved! The human-in-the-loop gate has cleared and the document is ready for client delivery.');
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    loadTranscriptPreview('meeting_1_initial_discovery.md');
+  </script>
+</body>
+</html>
