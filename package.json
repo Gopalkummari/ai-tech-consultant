@@ -1,0 +1,24 @@
+{
+  "name": "ai-tech-consultant-capstone",
+  "version": "1.0.0",
+  "description": "JD4 Capstone Project: AI Tech Consultant (Batch 1 - Anthropic / Applied AI / Agentic AI)",
+  "scripts": {
+    "start": "run.bat",
+    "test": "python evaluate_all.py",
+    "eval": "python evaluate_all.py",
+    "build:task2": "cd task2-inbox && npm run build"
+  },
+  "keywords": [
+    "ai-consultant",
+    "agentic-ai",
+    "knowledge-brain",
+    "inbox-agent",
+    "scope-of-work",
+    "rag",
+    "anthropic",
+    "fastapi",
+    "typescript"
+  ],
+  "author": "AI Tech Consultant Candidate",
+  "license": "UNLICENSED"
+}
