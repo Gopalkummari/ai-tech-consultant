@@ -138,4 +138,5 @@ def serve_index():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8003, reload=False)
+    print("\n -> Task 3 Scoper Dashboard: http://localhost:8003\n -> Swagger API Docs:      http://localhost:8003/docs\n")
+    uvicorn.run("main:app", host="127.0.0.1", port=8003, reload=False)

@@ -33,21 +33,22 @@ crawler_instance = PoliteBrainCrawler(polite_delay_sec=0.5)
 
 # Pydantic schemas
 class SearchRequest(BaseModel):
-    query: str = Field(..., example="How do I connect Stripe payment gateway?")
+    query: str = Field(..., json_schema_extra={"example": "How do I connect Stripe payment gateway?"})
     top_k: int = Field(default=5, ge=1, le=20)
 
 class ChatRequest(BaseModel):
-    query: str = Field(..., example="Can I give a refund to a cancelled member?")
+    query: str = Field(..., json_schema_extra={"example": "Can I give a refund to a cancelled member?"})
 
 class CapabilityRequest(BaseModel):
-    feature_description: str = Field(..., example="Add Facebook and Twitter profile icons to the header and footer")
+    feature_description: str = Field(..., json_schema_extra={"example": "Add Facebook and Twitter profile icons to the header and footer"})
 
 class ResolveEscalationRequest(BaseModel):
-    answer: str = Field(..., min_length=10, example="You can issue a full or partial refund in Finance >> Transaction History.")
+    answer: str = Field(..., min_length=10, json_schema_extra={"example": "You can issue a full or partial refund in Finance >> Transaction History."})
     expert_name: str = Field(default="Senior Tech Consultant")
 
 class SyncRequest(BaseModel):
     max_articles: int = Field(default=5, ge=1, le=50)
+
 
 
 @app.get("/api/health")
@@ -160,4 +161,5 @@ def serve_dashboard():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=False)
+    print("\n -> Task 1 Web Dashboard: http://localhost:8001\n -> Swagger API Docs:   http://localhost:8001/docs\n")
+    uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=False)

@@ -1,6 +1,8 @@
 @echo off
 echo ========================================================
 echo Starting AI Tech Consultant Capstone Suite
+echo Freeing ports 8001, 8002, 8003 if previously in use...
+powershell -Command "Get-NetTCPConnection -LocalPort 8001, 8002, 8003 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }" 2>nul
 echo Task 1 (Knowledge Brain)  : http://localhost:8001
 echo Task 2 (The Inbox Agent)  : http://localhost:8002
 echo Task 3 (Meeting to Scope) : http://localhost:8003

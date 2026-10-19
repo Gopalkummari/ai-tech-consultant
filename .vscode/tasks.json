@@ -1,0 +1,55 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run All 3 Tasks (Batch Script)",
+      "type": "shell",
+      "command": ".\\run.bat",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Task 1: Run Knowledge Brain (Port 8001)",
+      "type": "shell",
+      "command": "python task1-brain/main.py",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "ai-tech-consultant",
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Task 2: Run Inbox Agent (Port 8002)",
+      "type": "shell",
+      "command": "node task2-inbox/dist/index.js",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "ai-tech-consultant",
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Task 3: Run Meeting Scoper (Port 8003)",
+      "type": "shell",
+      "command": "python task3-scoper/main.py",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "ai-tech-consultant",
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Run All 60 Automated Evaluations",
+      "type": "shell",
+      "command": "python evaluate_all.py",
+      "problemMatcher": [],
+      "group": "test"
+    }
+  ]
+}

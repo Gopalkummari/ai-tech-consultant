@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Task 1 - Knowledge Brain (Python)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/task1-brain/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug Task 2 - Inbox Agent (Node)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/task2-inbox/dist/index.js",
+      "cwd": "${workspaceFolder}/task2-inbox"
+    },
+    {
+      "name": "Debug Task 3 - Meeting Scoper (Python)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/task3-scoper/main.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Run Evaluation Suite (60 Tests)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/evaluate_all.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

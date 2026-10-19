@@ -311,7 +311,9 @@
   </main>
 
   <script>
-    const API = window.location.origin;
+    const API = (window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null')
+      ? 'http://localhost:8003'
+      : window.location.origin;
 
     async function loadTranscriptPreview(filename) {
       const res = await fetch(`${API}/api/transcripts/${filename}`);

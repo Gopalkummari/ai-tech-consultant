@@ -417,7 +417,9 @@
   </div>
 
   <script>
-    const API = window.location.origin;
+    const API = (window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null')
+      ? 'http://localhost:8002'
+      : window.location.origin;
     let allEmails = [];
     let selectedEmailId = null;
     let activeCategory = 'all';
